@@ -1,0 +1,37 @@
+{
+  "name": "react-hooks-use-canvas-size",
+  "version": "0.1.0",
+  "description": "A react hook that calculates the width of a canvas",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Chris Milson",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src/**/* --ext .tsx,.ts,.jsx,.js",
+    "build": "rollup -c",
+    "prepare": "yarn build",
+    "preversion": "yarn lint",
+    "version": "yarn lint --fix && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.25",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.1",
+    "react": "^16.13.1",
+    "rollup": "^2.1.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  }
+}
