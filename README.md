@@ -13,7 +13,7 @@ yarn add react-hooks-use-canvas-size
 
 ## Usage
 
-To find the size of a canvas.
+Here is an example of finding the size of the canvas.
 
 ```jsx
 import React, { useRef, useEffect } from 'react'
@@ -23,6 +23,15 @@ const BigOlSquare = () => {
   const canvasRef = useRef()
   const { width, height } = useCanvasSize(canvasRef)
 
-  useEffect(() => {})
+  useEffect(() => {
+    if (!canvasRef.current) return
+
+    const ctx = canvasRef.current.getContext('2d')
+
+    const squareWidth = Math.min(width, height)
+    ctx.fillRect(0, 0, squareWidth, squareWidth)
+  })
+
+  return <canvas ref={canvasRef} />
 }
 ```
