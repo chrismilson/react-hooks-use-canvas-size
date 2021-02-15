@@ -16,8 +16,9 @@ export default function useCanvasSize(
   useEffect(() => {
     if (!canvasRef.current) return
     const getSize = () => {
-      const width = canvasRef.current.offsetWidth
-      const height = canvasRef.current.offsetHeight
+      const dpr = window.devicePixelRatio
+      const width = canvasRef.current.offsetWidth * dpr
+      const height = canvasRef.current.offsetHeight * dpr
       setSize({ width, height })
     }
     getSize()
