@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-use-canvas-size",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A react hook that calculates the width of a canvas",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
